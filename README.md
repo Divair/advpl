@@ -1,2 +1,2 @@
 # advpl
-Desenvolvimento de funções Advpl. Projetos de automação e bibliotecas
+Desenvolvimento de funções Advpl. Projetos de automação e bibliotecas.
