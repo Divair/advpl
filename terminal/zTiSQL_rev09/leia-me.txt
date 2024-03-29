@@ -1,0 +1,17 @@
+1. Compile os prw (zTiSQL, zConsSX3 e zCSSGrid)
+2. Execute diretamente no programa inicial via u_zTiSQL ao invés de SIGAMDI / SIGAADV
+ou
+3. Crie um ponto de entrada AfterLogin ou ChkExec e adicione uma tecla de atalho, por exemplo, Shift + F11 para executar u_zTiSQL, ai você pode acionar em qualquer tela do Protheus
+
+Obs.: Se for executar direto no programa inicial, revise as variáveis cUsrAux e cPswAux (recomendo não usar o usuário admin, ou usar uma senha criptografada, para não deixar a informação chumbada no fonte).
+
+Obs.2: Existe uma variável no fonte chamada de nTransQry
+ Se ela estiver como 0, não irá fazer nenhuma transformação
+ Se tiver como 1, irá transformar os comandos em maiúsculos (com exceção do que estiver em apóstrofos) - SQL Server e Oracle
+ Se tiver como 2, irá transformar os comandos em minúsculos (com exceção do que estiver em apóstrofos) - Postgre
+ 
+ Por Exemplo, nTransQry igual a 0:
+ SELECT bm_grupo, * FROM sbm010 WHERE D_E_L_e_T_ = ' ' AND LOWER(BM_DESC) LIKE '%camis%'
+ 
+ nTransQry igual a 1:
+ SELECT BM_GRUPO, * FROM SBM010 WHERE D_E_L_E_T_ = ' ' AND LOWER(BM_DESC) LIKE '%camis%'
