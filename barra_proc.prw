@@ -2,7 +2,7 @@
 #Include "TopConn.ch"
    
  
-/*/{Protheus.doc} SPPROGR teste
+/*/{Protheus.doc} SPPROGR 
 Função SPPROGR, exemplo de uso de barras de progresso
 @param Não recebe parametros
 @return Não retorna nada
